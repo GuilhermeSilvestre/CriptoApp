@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'main.dart';
 import 'package:flutter/services.dart';
+import 'alfabetoImagens.dart';
 
 class FigurasFinal extends StatefulWidget {
   const FigurasFinal({Key? key}) : super(key: key);

@@ -7,6 +7,7 @@ import 'figurasChoice.dart';
 import 'figurasFinal2.dart';
 import 'cifraFinal2.dart';
 import 'cifraChave.dart';
+import 'alfabetoImagens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         CifraChoice.id: (context) => CifraChoice(),
         CifraFinal.id: (context) => CifraFinal(),
         CifraFinal2.id: (context) => CifraFinal2(),
+        AlfabetoImagens.id: (context) => AlfabetoImagens(),
       },
     );
   }

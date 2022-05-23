@@ -1,3 +1,4 @@
+import 'package:criptoapp/alfabetoImagens.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'figurasFinal.dart';
@@ -67,6 +68,24 @@ class _FigurasChoiceState extends State<FigurasChoice> {
                   fixedSize: const Size(250, 90),
                   elevation: 4,
                   primary: const Color(0xffEC6D31),
+                  textStyle: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, AlfabetoImagens.id);
+                },
+                child: const Text('LEGENDA'),
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(250, 90),
+                  elevation: 4,
+                  primary: const Color(0xffEC6661),
                   textStyle: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
