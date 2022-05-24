@@ -69,6 +69,7 @@ class _CifraChaveState extends State<CifraChave> {
                   inputFormatters: [
                     FilteringTextInputFormatter(RegExp("[a-zA-Z]"),
                         allow: true),
+                    FilteringTextInputFormatter.deny(RegExp('[]')),
                   ],
                   maxLength: 6,
                   decoration: InputDecoration(
@@ -76,7 +77,6 @@ class _CifraChaveState extends State<CifraChave> {
                     hintText: 'Sua chave',
                   ),
                   onChanged: (value) {
-                    value ??= 'CHAVE';
                     chaveNova = value;
                   },
                 ),
@@ -88,6 +88,9 @@ class _CifraChaveState extends State<CifraChave> {
                     SharedPreferences prefs =
                         await SharedPreferences.getInstance();
                     setState(() {
+                      if (chaveNova == '' || chaveAtual == null) {
+                        chaveNova = 'CHAVE';
+                      }
                       chaveAtual = chaveNova;
                       chaveAtual = chaveAtual.toUpperCase();
                       prefs.setString('chave', chaveAtual);
