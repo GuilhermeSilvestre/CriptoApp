@@ -42,9 +42,10 @@ class _FigurasChoiceState extends State<FigurasChoice> {
                 height: 70,
               ),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, FigurasFinal.id);
-                },
+                onPressed: null,
+                //O onpressed seria para ir para FigurasFinal
+                //Navigator.pushNamed(context, FigurasFinal.id);
+                //Mas deixarei para depois
                 child: const Text('Alfabeto para Figuras'),
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(250, 90),
@@ -60,9 +61,10 @@ class _FigurasChoiceState extends State<FigurasChoice> {
                 height: 40,
               ),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, FigurasFinal2.id);
-                },
+                onPressed: null,
+                //O onpressed seria para ir para FigurasFinal2
+                //Navigator.pushNamed(context, FigurasFinal2.id);
+                //Mas deixarei para depois
                 child: const Text('Figuras para Alfabeto'),
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(250, 90),

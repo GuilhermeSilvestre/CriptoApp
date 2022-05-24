@@ -55,34 +55,10 @@ class _CifraChaveState extends State<CifraChave> {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
-                  height: 30,
-                ),
-                ElevatedButton(
-                  onPressed: () async {
-                    SharedPreferences prefs =
-                        await SharedPreferences.getInstance();
-                    setState(() {
-                      chaveAtual = chaveNova;
-                      chaveAtual = chaveAtual.toUpperCase();
-                      prefs.setString('chave', chaveAtual);
-                    });
-                  },
-                  child: const Text('Atualizar'),
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(130, 70),
-                    elevation: 4,
-                    primary: const Color(0xffEC6D31),
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                SizedBox(
                   height: 60,
                 ),
                 const Text(
-                  'Atualizar Chave',
+                  'Insira uma chave',
                   style: textoTelaInicial,
                   textAlign: TextAlign.center,
                 ),
@@ -97,36 +73,40 @@ class _CifraChaveState extends State<CifraChave> {
                   maxLength: 6,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: 'Seu texto',
+                    hintText: 'Sua chave',
                   ),
                   onChanged: (value) {
+                    value ??= 'CHAVE';
                     chaveNova = value;
-                    //print(texto);
                   },
                 ),
                 SizedBox(
                   height: 30,
                 ),
-                // ElevatedButton(
-                //   onPressed: () async {
-                //     Navigator.pushNamed(context, CifraChoice.id);
-                //     SharedPreferences prefs =
-                //         await SharedPreferences.getInstance();
-                //     setState(() {
-                //       prefs.setString('chave', chaveAtual);
-                //     });
-                //   },
-                //   child: const Text('Manter Chave Atual e Prosseguir'),
-                //   style: ElevatedButton.styleFrom(
-                //     fixedSize: const Size(280, 70),
-                //     elevation: 4,
-                //     primary: const Color(0xffEC6D31),
-                //     textStyle: const TextStyle(
-                //       fontSize: 16,
-                //       fontWeight: FontWeight.bold,
-                //     ),
-                //   ),
-                // ),
+                ElevatedButton(
+                  onPressed: () async {
+                    SharedPreferences prefs =
+                        await SharedPreferences.getInstance();
+                    setState(() {
+                      chaveAtual = chaveNova;
+                      chaveAtual = chaveAtual.toUpperCase();
+                      prefs.setString('chave', chaveAtual);
+                    });
+                  },
+                  child: const Text('Atualizar Chave'),
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(160, 70),
+                    elevation: 4,
+                    primary: const Color(0xffEC6D31),
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
                 SizedBox(
                   height: 40,
                 ),

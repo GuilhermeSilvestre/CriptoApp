@@ -921,7 +921,7 @@ class _CifraFinalState extends State<CifraFinal> {
                 SizedBox(
                   height: 30,
                 ),
-                Text(
+                SelectableText(
                   '$traducao',
                   style: textoCripto,
                   textAlign: TextAlign.center,
