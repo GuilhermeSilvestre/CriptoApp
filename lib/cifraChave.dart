@@ -88,7 +88,7 @@ class _CifraChaveState extends State<CifraChave> {
                     SharedPreferences prefs =
                         await SharedPreferences.getInstance();
                     setState(() {
-                      if (chaveNova == '' || chaveAtual == null) {
+                      if (chaveNova == '' || chaveNova == null) {
                         chaveNova = 'CHAVE';
                       }
                       chaveAtual = chaveNova;
